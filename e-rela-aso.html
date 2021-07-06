@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <link rel="stylesheet" type="text/css" href="estilo.css">
+    <link rel="stylesheet" type="text/css" href="normalize.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+</head>
+
+<body id="programas">
+    <div class="caja-fixed">
+        <ul class="menu">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="nosotros.html">Nosotros</a></li>
+        </ul>
+    </div>
+    <br>
+    <br>
+    <form id="formu-rela-asolud">
+        <label>Medida tomada: </label>
+        <input type="number" id="num1" autofocus placeholder="Ingrese numero">
+        <br>
+        <label>Medida real: </label>
+        <input type="number" id="num2" autofocus placeholder="Ingrese numero">
+        <br>
+        <p>El Error Absoluto es: <span id="el-resultado1"></span></p>
+        <p>El Error Relativo es: <span id="el-resultado2"></span></p>
+        <br>
+        <button type="button" onclick="calcular();">Calcular</button>
+        <button onclick="limpiar1();">Limpiar</button>
+        
+    </form>
+    
+    <form id="formu-redon">
+        <label>Medida a redondear: </label>
+        <input type="number" id="redon" autofocus placeholder="Ingrese numero">
+        <br>
+        <p>Se a redondeado a: <span id="redondeo"></span></p>
+        <br>
+        <button type="button" onclick="redondeo();">Redondear</button>
+        <button onclick="limpiar2();">Limpiar</button>
+    </form>
+
+    <script type="text/javascript" src="funciones.js"></script>
+    <br>
+    <input id="volver" type="button" onclick="history.back()" name="volver atrás" value="volver atrás">
+    <br>
+
+    <footer>
+        <div class="footer-all">
+            <div class="container-body">
+                <div class="colunm1">
+                    <h1>Mas informacion</h1>
+                    <p>Este proyecto fue realizado para cumplir con uno de los aprendisajes de la materia de metodos numericos, ademas de informar a la comunidad estudiantil y darles un aporte de nuestro trabajo</p>
+                </div>
+
+                <div class="colunm2">
+                    <h1>Redes sociales</h1>
+                    <div class="row">
+                        <img src="imagenes/logo_facebok.png">
+                        <label>Pedro Eduardo Ruedas Velasco</label>
+                    </div>
+
+                    <div class="row">
+                        <img src="imagenes/logo_facebok.png">
+                        <label>Adriel David Molina Cifuentes</label>
+                    </div>
+
+                    <div class="row">
+                        <img src="imagenes/logo_facebok.png">
+                        <label>Levi Magdiel Hernandez Mendez</label>
+                    </div>
+                </div>
+
+                <div class="colunm3">
+                    <h1>Informacions</h1>
+
+                    <div class="row2">
+                        <img src="imagenes/localizacion.png">
+                        <label>Avenida Instituto Tecnológico Kilómetro 3.5, Los Sabinos, 30000 Comitán de Domínguez, Chis.</label>
+                    </div>
+
+                    <div class="row2">
+                        <img src="imagenes/telefono2.png">
+                        <label>+52 044 044 0044</label>
+                    </div>
+
+                    <div class="row2">
+                        <img src="imagenes/correo.png">
+                        <label>l19700039@comitan.tecnm.mx</label>
+                    </div>
+                    <div class="row2">
+                        <img src="imagenes/correo.png">
+                        <label>l19700061@comitan.tecnm.mx</label>
+                    </div>
+                    <div class="row2">
+                        <img src="imagenes/correo.png">
+                        <label>l19700073@comitan.tecnm.mx</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-footer">
+            <div class="copyritght">
+                © 2021 Todos los derechos reservados | <a>KingCat</a>
+            </div>
+            <div class="information">
+                <a href="">Politica y Privacidad | KingCat</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
