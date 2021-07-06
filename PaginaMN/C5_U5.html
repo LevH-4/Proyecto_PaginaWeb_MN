@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metodos Numericós</title>
+    <link rel="stylesheet" type="text/css" href="estilo.css">
+    <link rel="stylesheet" type="text/css" href="normalize.css">
+</head>
+<body id="C5_U5">
+    <div class="caja-fixed">
+        <ul class="menu">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="nosotros.html">Nosotros</a></li>
+        </ul>
+    </div>
+
+    <div id="Contenedor5">
+    	<b id="c5">C5_U5: 5.Interpolación y ajuste de funciones.</b><br>
+        <br>
+        <b id="c5-t1">5.1 Polinomio de interpolación de Newton.</b><br>
+        <br>
+        El Método de Newton es un método de interpolación polinómica, la cual es útil
+        para casos donde se requieran pocos puntos para interpolar, puesto que el
+        número de puntos es proporcional al grado del polinomio. Esto permite la
+        creación de un polinomio de grado n-1, donde n es el número de datos que se tienen.
+        La interpolación de Newton asume que no existe ruido en sus mediciones de
+        datos, es decir, que el polinomio generado por el método pasará por todas las coordenadas insertadas al método a menos que se conozca la función original.
+        El propósito es poder generar una función para la cual se pueda introducir todos
+        los datos originales y obtener 0 error, pues la curva se va modelando punto a punto.
+        Al obtener una función, se pueden crear aproximaciones y estimaciones.
+        El método de Newton utiliza la fórmula de polinomios de Newton:
+        <br>
+        <img id="c5-i1" src="">
+        <br>
+        <br>
+        <b id="c5-t2">5.2 Polinomio de interpolación de Lagrange.</b><br>
+        <br>
+        La interpolación permite el cálculo de valores intermedios de datos
+        experimentales los cuales no tienen una función que los represente. El método
+        más común para interpolar valores intermedios, es la interpolación polinomial, la
+        cual consiste en determinar el polinomio de orden n que ajusta a n+1 datos. La
+        interpolación de Lagrange es una de las alternativas más atractivas que existe
+        para interpolar, debido a la facilidad de programar también es simplemente una
+        reformulación del polinomio de Newton que evita el cálculo de las diferencias
+        divididas.
+        <img id="c5-i2" src="imagenes/c5_i1.png">
+        <br>
+        <br>
+        Esta fórmula nos dice que restamos x de todas las xn sin contar la que estamos
+        multiplicando por f(Xn) y se dividirá la que se dejó por fuera restándole de todas
+        las demás.
+        <br>
+        Para dejar claro esto si vemos la primera parte de la fórmula se está
+        multiplicando por f(x0) por lo tanto no tomamos x0 en cuenta en la parte de
+        arriba, sin embargo es la que resta a todas en la parte inferior de nuestra
+        fórmula.
+        <br>
+        <br>
+        <b id="c5-t3">5.3 Interpolación segmentada.</b><br>
+        <br>
+        Esta interpolación se llama interpolación segmentaria o interpolación por splines. La idea central es que en vez de usar un solo polinomio para interpolar los datos, podemos usar segmentos de polinomios y unirlos adecuadamente para formar nuestra interpolación.<br>
+        Cabe mencionar que entre todas, las splines cúbicas han resultado ser las más adecuadas para aplicaciones como la mencionada anteriormente.<br>
+        Así pues, podemos decir de manera informal, que una funcion spline está formada  por varios polinomios, cada uno definido en un intervalo y que se unen entre si bajo ciertas condiciones de continuidad.<br>
+
+        <br>
+        <br>
+        <b id="c5-t4">5.4 Regresión y correlación.</b><br>
+        <br>
+        <i>Correlación:</i> El coeficiente de correlación es la medida específica que 
+        cuantifica la intensidad de la relación lineal entre dos variables en un análisis 
+        de correlación. En los informes de correlación, este coeficiente se simboliza con la r.<br>
+        Para dos variables, la fórmula compara la distancia de cada dato puntual 
+        respecto a la media de la variable y utiliza esta comparación para decirnos 
+        hasta qué punto la relación entre las variables se ajusta a una línea imaginaria trazada entre los datos. 
+        <br>El coeficiente de correlación de la muestra puede representarse con una fórmula:<br>
+        <br>
+        <img id="c5-i3" src="imagenes/c5_i3.png">
+        <br>
+        <i>Regresión:</i> La regresión lineal es una técnica que permite cuantificar la relación que puede ser observada cuando se grafica un diagrama de puntos dispersos correspondientes a dos variables, cuya tendencia general es rectilínea mediante una ecuación “del mejor ajuste” de la forma: Y= mX+b<br>
+        Donde m y b son los parámetros de la recta: m es la pendiente de la recta y b es la ordenada al origen.<br>
+        La regresión es empleada para modelos ópticos para patrones de demanda 
+        con tendencia (creciente o decreciente), es decir, patrones que presenten 
+        una relación de linealidad entre la demanda y el tiempo.
+        <br>
+        <img id="c5-i4" src="imagenes/c5_i4.png">
+        <br>
+        <b id="c5-t5">5.5 Mínimos cuadrados.</b><br>
+        <br>
+        Es un procedimiento de análisis numérico en la que, dados un conjunto de datos (pares ordenados y familia de funciones), se intenta determinar la función continua que mejor se aproxime a los datos, proporcionando una demostración visual de la relación entre los puntos de los mismos.<br>
+        En su forma más simple, busca minimizar la suma de cuadrados de las diferencias ordenadas (llamadas residuos) entre los puntos generados por la función y los correspondientes datos.<br>
+        Este método se utiliza comúnmente para analizar una serie de datos que se obtengan de algún estudio, con el fin de expresar su comportamiento de manera lineal y así minimizar los errores de la data tomada.<br>
+        Su expresión general se basa en la ecuación de una recta y = mx + b.<br>
+        Donde m es la pendiente y b el punto de corte, y vienen expresadas de la siguiente manera:
+        <br>
+        <img id="c5-i5" src="imagenes/c5_i5.png">
+        <br>
+        <b id="c5-t6">5.6 Problemas de aplicación.</b><br>
+        <br>
+        Se puede utilizar en el cálculo de estructuras, instalaciones eléctricas, hidráulicas y sanitarias, en cálculos de carreteras, topografía y hasta en diseño de las estructuras, no en todos los casos pero principalmente cuando hay mala toma de datos o haya datos faltantes.<br>
+        En el subcampo matemático del análisis numérico, un spline es una curva diferenciable definida en porciones mediante polinomios. En los problemas de interpolación, se utiliza a menudo la interpolación mediante splines porque da lugar a resultados similares requiriendo solamente el uso de polinomios de bajo grado, evitando así las oscilaciones, indeseables en la mayoría de las aplicaciones, encontradas al interpolar mediante polinomios de grado elevado.Para el ajuste de curvas, los splines se utilizan para aproximar formas complicadas.<br>
+        La simplicidad de la representación y la facilidad de cómputo de los splines los hacen populares para la representación de curvas en informática, particularmente en el terreno de los gráficos por ordenado.<br>
+        Tenemos los siguientes 3:<br>
+        · Interpolación Segmentaria Lineal<br>
+        · Interpolación Segmentaria Cuadrática<br>
+        · Interpolación Segmentaria Cúbica<br>
+        <br>
+        <br>
+    </div>
+
+    <div id="acti">
+        <div class="acti_titulo">
+            <h3>Actividades:</h3>
+        </div>
+        <br>
+        <div class="acti_contenido">
+        <h3><a href="PDF C5 P1.html" id="trabajo">Metodos de Interpolación</a></h3>
+        <br>
+        <h3><a href="PA10MN.html" id="trabajo">PA10</a></h3>
+        <br>
+        <h3><a href="ResumenC5.html" id="trabajo">Resumen Unidad 5</a></h3>
+        <br> 
+        </div>
+    </div>
+
+    <div id="progra">
+        <div class="progra_titulo">
+            Programas:
+        </div>
+        <br>
+        <div class="progra_contenido">
+            <a id="trabajo" href="https://drive.google.com/file/d/1PUOCF3sOQkGjuKObH6OaczIlBTTsh4Yk/view?usp=sharing" target="blank">Regresión lineal simple</a>
+            <br>
+            <br>
+            <a id="trabajo" href="https://drive.google.com/file/d/1iSYO0lD88e4mevP23BunwkbLzRby0e2n/view?usp=sharing" target="blank">Cuadrado Minimo</a>
+            <br>
+            <br>
+            <a id="trabajo" href="https://drive.google.com/file/d/1epFcdi-t_Ia0hJaqOpoC-VznqUgmKAaT/view?usp=sharing">Metodo de interpolación</a>
+        </div>
+        <br>
+    </div>
+    <br>
+
+
+    <footer>
+        <div class="footer-all">
+            <div class="container-body">
+                <div class="colunm1">
+                    <h1>Mas informacion</h1>
+                    <p>Este proyecto fue realizado para cumplir con uno de los aprendisajes de la materia de metodos numericos, ademas de informar a la comunidad estudiantil y darles un aporte de nuestro trabajo</p>
+                </div>
+
+                <div class="colunm2">
+                    <h1>Redes sociales</h1>
+                    <div class="row">
+                        <img src="imagenes/logo_facebok.png">
+                        <label>Pedro Eduardo Ruedas Velasco</label>
+                    </div>
+
+                    <div class="row">
+                        <img src="imagenes/logo_facebok.png">
+                        <label>Adriel David Molina Cifuentes</label>
+                    </div>
+
+                    <div class="row">
+                        <img src="imagenes/logo_facebok.png">
+                        <label>Levi Magdiel Hernandez Mendez</label>
+                    </div>
+                </div>
+
+                <div class="colunm3">
+                    <h1>Informacion</h1>
+
+                    <div class="row2">
+                        <img src="imagenes/localizacion.png">
+                        <label>Avenida Instituto Tecnológico Kilómetro 3.5, Los Sabinos, 30000 Comitán de Domínguez, Chis.</label>
+                    </div>
+
+                    <div class="row2">
+                        <img src="imagenes/telefono2.png">
+                        <label>+52 044 044 0044</label>
+                    </div>
+
+                    <div class="row2">
+                        <img src="imagenes/correo.png">
+                        <label>l19700039@comitan.tecnm.mx</label>
+                    </div>
+                    <div class="row2">
+                        <img src="imagenes/correo.png">
+                        <label>l19700061@comitan.tecnm.mx</label>
+                    </div>
+                    <div class="row2">
+                        <img src="imagenes/correo.png">
+                        <label>l19700073@comitan.tecnm.mx</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-footer">
+            <div class="copyritght">
+                © 2021 Todos los derechos reservados | <a>KingCat</a>
+            </div>
+            <div class="information">
+                <a href="">Politica y Privacidad | KingCat</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
